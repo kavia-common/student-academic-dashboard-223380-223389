@@ -1,7 +1,8 @@
 {
   "recent": [
-    { "course": "CS301", "assignment": "Project 1", "score": 93, "max": 100 },
-    { "course": "MATH220", "assignment": "Quiz 3", "score": 88, "max": 100 }
+    { "course": "CS301 - Algorithms", "assignment": "Project 1: Graphs & Shortest Paths", "score": 93, "max": 100, "credits": 3, "details": "Implemented Dijkstra and Bellman-Ford" },
+    { "course": "MATH220 - Linear Algebra", "assignment": "Quiz 3: Eigenvalues", "score": 88, "max": 100, "credits": 4, "details": "Covered eigen decomposition and diagonalization" },
+    { "course": "ENG105 - Academic Writing", "assignment": "Essay Draft", "score": 95, "max": 100, "credits": 2, "details": "Argument structure and citations" }
   ],
-  "overallGPA": 3.72
+  "overallGPA": 3.78
 }

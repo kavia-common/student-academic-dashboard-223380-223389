@@ -1,5 +1,34 @@
-[
-  { "course": "CS301 - Algorithms", "time": "Mon 10:00 - 11:30", "location": "Room 210", "instructor": "Dr. Lee", "startsIn": "2h 15m" },
-  { "course": "MATH220 - Linear Algebra", "time": "Tue 09:00 - 10:30", "location": "Room 105", "instructor": "Prof. Ramirez", "startsIn": "1d" },
-  { "course": "HIST110 - World History", "time": "Wed 14:00 - 15:30", "location": "Hall B", "instructor": "Dr. Chen", "startsIn": "2d" }
-]
+{
+  "upcoming": [
+    {
+      "id": "evt-001",
+      "course": "CS301 - Algorithms",
+      "instructor": "Dr. Lee",
+      "location": "Room 210",
+      "time": "Mon 10:00 - 11:30",
+      "start": "2025-03-24T10:00:00.000Z",
+      "end": "2025-03-24T11:30:00.000Z",
+      "startsIn": "2h 15m"
+    },
+    {
+      "id": "evt-002",
+      "course": "MATH220 - Linear Algebra",
+      "instructor": "Prof. Ramirez",
+      "location": "Room 105",
+      "time": "Tue 09:00 - 10:30",
+      "start": "2025-03-25T09:00:00.000Z",
+      "end": "2025-03-25T10:30:00.000Z",
+      "startsIn": "1d"
+    },
+    {
+      "id": "evt-003",
+      "course": "ENG105 - Academic Writing",
+      "instructor": "Dr. Patel",
+      "location": "Hall B",
+      "time": "Wed 14:00 - 15:30",
+      "start": "2025-03-26T14:00:00.000Z",
+      "end": "2025-03-26T15:30:00.000Z",
+      "startsIn": "2d"
+    }
+  ]
+}
