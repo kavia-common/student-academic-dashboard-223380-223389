@@ -1,0 +1,7 @@
+{
+  "recent": [
+    { "course": "CS301", "assignment": "Project 1", "score": 93, "max": 100 },
+    { "course": "MATH220", "assignment": "Quiz 3", "score": 88, "max": 100 }
+  ],
+  "overallGPA": 3.72
+}

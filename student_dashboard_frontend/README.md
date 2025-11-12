@@ -1,82 +1,94 @@
-# Lightweight React Template for KAVIA
+# Student Academic Dashboard - Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A React frontend for students to view their dashboard, schedules, grades, announcements, and profile. Implements the "Ocean Professional" theme with a modern, accessible UI.
 
-## Features
+## Quick Start
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Node 18+ recommended
+- Install dependencies:
 
-## Getting Started
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```bash
+npm install
 ```
 
-### Components
+- Run development server (port 3000):
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+```bash
+npm start
+```
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+- Run tests:
 
-## Learn More
+```bash
+npm test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Build:
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Environment Variables
 
-### Analyzing the Bundle Size
+Populate a `.env` based on `.env.example`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Available variables:
+- REACT_APP_API_BASE: Optional. If provided, the app will fetch data from this API; otherwise it uses local mock JSON to render UI.
+- REACT_APP_BACKEND_URL: Optional informational link in topbar.
+- REACT_APP_FRONTEND_URL: Public URL for the frontend (defaults to current origin).
+- REACT_APP_WS_URL: Optional WebSocket URL for future real-time features.
+- REACT_APP_NODE_ENV, REACT_APP_NEXT_TELEMETRY_DISABLED, REACT_APP_ENABLE_SOURCE_MAPS, REACT_APP_PORT, REACT_APP_TRUST_PROXY, REACT_APP_LOG_LEVEL, REACT_APP_HEALTHCHECK_PATH, REACT_APP_FEATURE_FLAGS, REACT_APP_EXPERIMENTS_ENABLED: Optional flags/config.
 
-### Making a Progressive Web App
+See src/config/config.js for how values are read with safe fallbacks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Theme
 
-### Advanced Configuration
+The Ocean Professional theme and utilities are in `src/theme.css`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Key palette:
+- Primary: #2563EB
+- Secondary/Success accent: #F59E0B
+- Error: #EF4444
+- Background: #f9fafb
+- Surface: #ffffff
+- Text: #111827
+- Subtle gradient: blue-500/10 to gray-50
 
-### Deployment
+Design elements:
+- Rounded corners, subtle shadows, smooth transitions
+- Accessible focus outlines using a soft blue ring
+- Semantic markup and ARIA labels
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Architecture
 
-### `npm run build` fails to minify
+- Routing: `react-router-dom` with routes for Dashboard, Schedule, Grades, Announcements, Profile.
+- Data: `src/services/api.js` fetches from `REACT_APP_API_BASE` or provides mock data from `src/mock/*`.
+- Config: `src/config/config.js` centralizes environment configuration.
+- Error handling: `src/components/ErrorBoundary.js`
+- Toasts: `src/components/Toast.js`
+- Widgets: Profile, Schedule, Grades, Announcements under `src/components/widgets`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Accessibility
+
+- Semantic HTML for nav, main, sections
+- ARIA labels and skip-link for keyboard users
+- Focus styles via `:focus-visible` and theme focus ring
+- High-contrast text and buttons
+
+## Testing
+
+- Minimal examples using React Testing Library:
+  - `src/components/widgets/ProfileCard.test.js`
+  - `src/App.test.js`
+
+## Mock Data
+
+The app renders with mock data by default when `REACT_APP_API_BASE` is not set. Mock files are in `src/mock/`.
+
+## Project Scripts
+
+- `npm start` - start dev server
+- `npm test` - run tests
+- `npm run build` - production build
+
